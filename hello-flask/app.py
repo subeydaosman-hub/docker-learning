@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     db = mysql.connector.connect(
-        host="mydb",
+        host="db",
         user="root",
         password="my-secret-pw",
         database="mysql"
