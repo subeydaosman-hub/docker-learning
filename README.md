@@ -14,21 +14,21 @@ This repository documents my hands-on Docker learning journey as part of the Cod
 
 
 
-\- Docker \& Docker Compose
+- Docker \& Docker Compose
 
-\- Python \& Flask
+- Python \& Flask
 
-\- MySQL
+- MySQL
 
-\- Redis
+- Redis
 
-\- Nginx
+- Nginx
 
-\- Docker Hub
+- Docker Hub
 
-\- AWS Elastic Container Registry (ECR)
+- AWS Elastic Container Registry (ECR)
 
-\- Git \& GitHub
+- Git \& GitHub
 
 
 
@@ -46,15 +46,15 @@ A containerised Flask application connected to a MySQL database.
 
 \*\*Key achievements:\*\*
 
-\- Built custom Docker images.
+- Built custom Docker images.
 
-\- Configured communication between containers.
+- Configured communication between containers.
 
-\- Managed multiple services using Docker Compose.
+- Managed multiple services using Docker Compose.
 
-\- Implemented multistage builds, reducing local image disk usage by approximately 17.5%.
+- Implemented multistage builds, reducing local image disk usage by approximately 17.5%.
 
-\- Published application images to Docker Hub and AWS ECR.
+- Published application images to Docker Hub and AWS ECR.
 
 
 
@@ -68,17 +68,17 @@ A scalable multi-container web application that tracks page visits using Redis.
 
 \*\*Key features:\*\*
 
-\- Persistent storage using Docker volumes.
+- Persistent storage using Docker volumes.
 
-\- Configurable connections using environment variables.
+- Configurable connections using environment variables.
 
-\- Three Flask application instances.
+- Three Flask application instances.
 
-\- Nginx reverse proxy and load balancing.
+- Nginx reverse proxy and load balancing.
 
-\- Shared Redis database.
+- Shared Redis database.
 
-\- Verified traffic distribution through container logs.
+- Verified traffic distribution through container logs.
 
 
 
@@ -142,9 +142,9 @@ Access the application:
 
 
 
-\- Welcome page: http://localhost:5002
+- Welcome page: http://localhost:5002
 
-\- Visit counter: http://localhost:5002/count
+- Visit counter: http://localhost:5002/count
 
 
 
@@ -164,25 +164,25 @@ docker compose down
 
 
 
-\- Containerisation
+- Containerisation
 
-\- Docker image management
+- Docker image management
 
-\- Container networking
+- Container networking
 
-\- Multi-container applications
+- Multi-container applications
 
-\- Persistent data management
+- Persistent data management
 
-\- Environment-based configuration
+- Environment-based configuration
 
-\- Container registries
+- Container registries
 
-\- Horizontal scaling
+- Horizontal scaling
 
-\- Load balancing
+- Load balancing
 
-\- Troubleshooting and debugging
+- Troubleshooting and debugging
 
 
 
@@ -204,5 +204,6 @@ horizontal scaling and Nginx load balancing.
 ### About My Project
 
 ![My DevOps Journey](flask-redis/screenshots/about.png)
+
 
 
