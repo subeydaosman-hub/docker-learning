@@ -5,6 +5,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir flask redis
 
 COPY app.py .
+COPY templates/ ./templates/
 
 EXPOSE 5002
 

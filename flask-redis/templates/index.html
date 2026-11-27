@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Visit Tracker</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .dashboard {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        h1, .counter {
+            color: #60a5fa;
+        }
+
+        .counter {
+            font-size: 65px;
+            font-weight: bold;
+        }
+
+        .connected {
+            color: #4ade80;
+        }
+
+        a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        footer {
+            color: #94a3b8;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>🐳 DevOps Visit Tracker</h1>
+        <p>My journey into DevOps Engineering</p>
+
+        <div class="card">
+            <h2>Total Visits</h2>
+            <div class="counter">
+                {{ visits | default("—") }}
+            </div>
+        </div>
+
+        {% if hostname %}
+        <div class="card">
+            <h2>Infrastructure Status</h2>
+            <p class="connected">● Redis Connected</p>
+            <p>Request handled by Flask container:</p>
+            <strong>{{ hostname }}</strong>
+        </div>
+        {% endif %}
+
+        <a href="/count">Track Visit</a>
+        <a href="/about">About My Project</a>
+
+        <div class="card">
+            <h2>Powered By</h2>
+            <p>Docker | Flask | Redis | Nginx</p>
+        </div>
+
+        <footer>
+            Built as part of my CoderCo DevOps journey.
+        </footer>
+    </div>
+</body>
+</html>

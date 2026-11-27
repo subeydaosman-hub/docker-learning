@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 import redis
 import os
+import socket
 
 app = Flask(__name__)
 
@@ -11,11 +12,20 @@ r = redis.Redis(host=redis_host, port=redis_port)
 
 @app.route("/")
 def home():
-    return "Welcome to my Flask Redis application!"
+    return render_template("index.html")
 
 @app.route("/count")
 def count():
     visits = r.incr("visits")
-    return f"Visit count: {visits}"
+    return render_template(
+        "index.html",
+        visits=visits,
+        hostname=socket.gethostname()
+    )
 
-app.run(host="0.0.0.0", port=5002)
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5002)
